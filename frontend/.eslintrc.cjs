@@ -1,18 +1,27 @@
+/** @type {import('eslint').Linter.Config} */
 module.exports = {
-  root: true,
-  env: { browser: true, es2020: true },
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaVersion: 2020,
+    sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true,
+    },
+  },
   extends: [
     'eslint:recommended',
+    'plugin:react/recommended',
     'plugin:@typescript-eslint/recommended',
-    'plugin:react-hooks/recommended',
+    'plugin:prettier/recommended', // Integrates Prettier with ESLint
   ],
-  ignorePatterns: ['dist', '.eslintrc.cjs'],
-  parser: '@typescript-eslint/parser',
-  plugins: ['react-refresh'],
+  plugins: ['react', '@typescript-eslint'],
   rules: {
-    'react-refresh/only-export-components': [
-      'warn',
-      { allowConstantExport: true },
-    ],
+    'prettier/prettier': ['error'], // Ensures Prettier rules are enforced
+    // Add any additional rules or overrides here
   },
-}
+  settings: {
+    react: {
+      version: 'detect', // Automatically detects the React version
+    },
+  },
+};
