@@ -1,4 +1,4 @@
-import { FaGithub, FaInstagram, FaLinkedin,  FaSquareXTwitter } from "react-icons/fa6"
+import { FaGithub, FaLinkedin } from "react-icons/fa6"
 
 const Navbar = () => {
   return (
@@ -9,8 +9,8 @@ const Navbar = () => {
       <div className="m-8 flex items-center justify-center gap-4 text-2xl">
         <FaLinkedin />
         <FaGithub />
-        <FaInstagram />
-        <FaSquareXTwitter />
+        {/* <FaInstagram />
+        <FaSquareXTwitter /> */}
       </div>
     </nav>
   )

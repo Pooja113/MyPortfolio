@@ -2,6 +2,8 @@ import { FaNodeJs } from "react-icons/fa6"
 import { RiReactjsLine } from "react-icons/ri"
 import { SiExpress, SiMongodb } from "react-icons/si"
 import { TbBrandNextjs } from "react-icons/tb"
+import { BiLogoPostgresql } from "react-icons/bi"
+
 
 const Technologies = () => {
   return (
@@ -22,6 +24,9 @@ const Technologies = () => {
         </div>
         <div className="rounded-2xl border-4 border-neutral-800 p-4" >
           <TbBrandNextjs className="text-7xl" />
+        </div>
+        <div className="rounded-2xl border-4 border-neutral-800 p-4" >
+          <BiLogoPostgresql className="text-7xl text-sky-700" />
         </div>
       </div>
       
